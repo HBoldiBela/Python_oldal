@@ -1,0 +1,61 @@
+.navbar{
+    border-bottom: 2px solid #444;
+    color: white;
+    height: 70px;
+}
+
+.nav{
+    color: rgb(255, 166, 166);
+}
+
+.navbar-brand{
+    font-size: 25px;
+}
+
+.nav-item{
+    font-size: 20px;
+}
+
+.nav-item:hover{
+    transition: 0.3s;
+    font-size: 22px;
+}
+
+.dropdown-menu{
+    background-color: rgb(255, 101, 101);
+}
+
+.dropdown-item:hover{
+    background-color: rgb(214, 79, 79);
+}
+
+body{
+    background-color: rgb(66, 0, 0) !important;
+    color: white !important;
+}
+
+.container-fluid{
+    background-color: #cc00008a !important;
+    color: rgb(255, 255, 255) !important;
+}
+
+h2, h3, h4, p{
+    text-align: center;
+}
+
+.egyszeru{
+    background-color: rgb(255, 255, 255);
+}
+
+img{
+    height: 450px;
+    width: 600px;
+}
+
+footer{
+    background:#0d0d0d;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+    border-top:2px solid darkred;
+}

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="css/mystyle.css" rel="stylesheet" >
+    <title>Python bemutató</title>
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+        <div class="container-fluid">
+            <ul class="navbar-nav">
+            <a class="nav navbar-brand" href="#">Pythonlearning</a>
+            <li class="nav-item dropdown">
+                <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Egyszerű adattípusok</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#egyszeru">str</a></li>
+                    <li><a class="dropdown-item" href="#str">int</a></li>
+                    <li><a class="dropdown-item" href="#int">float</a></li>
+                    <li><a class="dropdown-item" href="#list">bool</a></li>
+                    <li><a class="dropdown-item" href="#bool">list</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Összetett adattípusok</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#range">range</a></li>
+                    <li><a class="dropdown-item" href="#dict">dict</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link active" href="#elagazas">Elágazás</a>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Ciklusok</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#gyereke">Fájlkezelés</a></li>
+                    <li><a class="dropdown-item" href="#gyereke">Kivételkezelés</a></li>
+                </ul>
+
+            <li class="nav-item">
+                <a class="nav-link active" href="#sajat">Saját függvény készítése</a>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Ciklusok</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#megnyitas">Megnyitási módok</a></li>
+                    <li><a class="dropdown-item" href="#iras">Írás</a></li>
+                    <li><a class="dropdown-item" href="#olvasas">Olvasas</a></li>
+                </ul>
+
+            <li class="nav-item">
+                <a class="nav-link active" href="#kivetelkezeles">Kivételkezelés</a>
+            </li>
+            </ul>
+        </div>
+    </nav>
+    <br><br>
+
+</head>
+<body>
+
+    <div class="container-fluid p-5 bg-light text-dark text-center">
+        <h1>Üdvözlünk a Pythonlearning oldalán</h1>
+        <p>Python gyakorló oldal</p> 
+        <button type="button" class="btn btn-dark">Projektek megtekintése</button>
+    </div>
+
+    <br><br>
+
+
+    <h2 id="egyszeru">Egyszerű adattípusok</h2>
+
+        <h4 id="str">str</h4>
+
+        <p>Például: <strong>x = "Hello World"</strong></p>
+
+        <h4 id="int">int</h4>
+
+        <p>Például: <strong>x = 67</strong></p>
+
+        <h4 id="float">float</h4>
+
+        <p>Például: <strong>x = 67.67</strong></p>
+
+        <h4 id="bool">bool</h4>
+
+        <p>Például: <strong>x = True</strong> vagy <strong>x = False</strong></p>
+
+        <h4 id="list">list</h4>
+
+        <p>Például: <strong>x = ["alma", "körte, "szilva"]</strong></p>
+
+        <center><img src="img/easy dt.png" alt="Egyszerű"></center>
+
+        <br><br><br>
+
+    <h2>Összetett adattípusok</h2>
+
+        <h4 id="range">range</h4>
+
+        <p>Például: <strong>for i in range(0,7,2): <br>print(i) <br>
+            Tehát i = 0, 2, 4, 6 
+        </strong></p>
+
+        <h4 id="dict">dict</h4>
+
+        <p>A dictionary (magyarul szótár)-ban meglepő módon szavakat lehet el menteni. <br>
+        Páldául: <strong>x = {név : Béla, kor : 20}</strong></p>
+
+        <center><img src="img/data types.png" alt="Összes"></center> 
+
+        <br><br>
+        
+    <h2 id="elagazas">Elágazás</h2>
+
+        <h4>if</h4>
+
+        <div class="text-center">        
+            <h5>Logikai feltételek:</h5>
+            <p>Egyenlő: <strong>a == b</strong><br>
+            Nem egyenlő: <strong>a != b</strong><br>
+            Kevesebb, mint: <strong>a < b</strong><br>
+            Kevesebb vagy egyenlő, mint: <strong>a <= b</strong><br>
+            Nagyobb, mint: <strong>a > b</strong><br>
+            Nagyobb vagy egyenlő, mint: <strong>a >= b</strong><br>
+            </p>
+        </div>
+
+
+        <h4>elif</h4>
+
+        <p>Az elif kulcsszó a Python azon értelmű megfogalmazása, 
+            hogy „ha az előző feltételek nem voltak igazak, 
+            akkor próbáld ki ezt a feltételt”. <br>
+            Például: <br><strong>a = 33 <br> b = 33 <br>
+            if a > b: <br> print("Az a nagyobb, mint a b.") <br>
+            elif a == b: <br> print("Az a és a b megegyezik.")</strong></p>
+
+        <h4>else</h4>
+
+        <p>Az else kulcsszó mindent elkap, amit az előző feltételek nem kapnak el. <br>
+        Például: <br> <strong>a = 200 <br> b = 33 <br>
+        if b > a: <br> print("A b nagyobb, mint az a.") <br>
+        elif a == b: <br> print(Az a és a b megyezik.) <br>
+        else: <br>
+        print("Az a nagyobb, mint b")</strong></p>
+
+        <center><img src="img/if.jpg" alt="folyamata"></center>
+
+        <br><br>
+
+    <h2>Ciklusok</h2>
+
+        <h3>for</h3>    
+    
+        <p></p>
+
+        <h3>while</h3>
+
+        <p></p>
+
+        <br><br>
+
+    <h2 id="sajat">Saját függvény készítése</h2>
+
+        <p></p>
+
+    <h2>Fájlkezelés</h2>
+
+        <h3 id="megnyitas">Megnyitási módok</h3>
+
+        <p></p>
+
+        <h3 id="iras">Írás</h3>
+
+        <p></p>
+
+        <h3 id="olvasas">Olvasás</h3>
+
+        <p></p>
+
+    <h2 id="kivetelkezeles">Kivételkezelés</h2>
+
+        <p></p>
+    <br><br>
+</body>
+
+<footer>
+    <p>Pythonlearning © 2026</p>
+</footer>
+
+</html>
