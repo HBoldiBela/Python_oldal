@@ -28,7 +28,6 @@
 .dropdown-item:hover{
     background-color: rgb(214, 79, 79);
 }
-
 body{
     background-color: rgb(66, 0, 0) !important;
     color: white !important;
@@ -52,10 +51,88 @@ img{
     width: 600px;
 }
 
+.kepek {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
 footer{
     background:#0d0d0d;
     text-align:center;
     padding:20px;
     margin-top:40px;
     border-top:2px solid darkred;
+}
+
+h2, h3, h4{
+    scroll-margin-top: 85px;
+}
+
+h2, h3, h4{
+    scroll-margin-top: 80px;
+}
+
+h2{
+    color: rgb(255, 120, 120);
+    font-size: 2rem;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 100, 100, 0.3);
+    padding-bottom: 10px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h3{
+    color: rgb(255, 160, 160);
+    font-size: 1.5rem;
+    margin-top: 30px;
+}
+
+h4{
+    color: rgb(255, 180, 180);
+    font-size: 1.2rem;
+    margin-top: 25px;
+}
+
+h5{
+    color: rgb(255, 200, 200);
+}
+
+p{
+    max-width: 750px;
+    margin: 10px auto 20px auto;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.88);
+}
+
+strong{
+    color: rgb(255, 210, 150);
+}
+
+.hero-section{
+    border-bottom: 3px solid darkred;
+}
+
+.hero-section h1{
+    color: white;
+    font-size: 2.5rem;
+}
+
+.hero-section p{
+    color: rgba(255,255,255,0.85);
+    font-size: 1.1rem;
+}
+
+center img{
+    border: 2px solid rgba(255, 100, 100, 0.4);
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(200, 0, 0, 0.4);
+}
+
+footer p{
+    color: rgba(255,255,255,0.6);
+    margin: center;
 }
