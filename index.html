@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-    <link href="css/mystyle.css" rel="stylesheet" >
+    <link href="css/mystyle.css" rel="stylesheet">
     <title>Python bemutató</title>
 
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
@@ -15,11 +15,11 @@
             <li class="nav-item dropdown">
                 <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Egyszerű adattípusok</a>
                 <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#egyszeru">str</a></li>
-                    <li><a class="dropdown-item" href="#str">int</a></li>
-                    <li><a class="dropdown-item" href="#int">float</a></li>
-                    <li><a class="dropdown-item" href="#list">bool</a></li>
-                    <li><a class="dropdown-item" href="#bool">list</a></li>
+                    <li><a class="dropdown-item" href="#str">str</a></li>
+                    <li><a class="dropdown-item" href="#int">int</a></li>
+                    <li><a class="dropdown-item" href="#float">float</a></li>
+                    <li><a class="dropdown-item" href="#bool">bool</a></li>
+                    <li><a class="dropdown-item" href="#list">list</a></li>
                 </ul>
             </li>
 
@@ -38,21 +38,23 @@
             <li class="nav-item dropdown">
                 <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Ciklusok</a>
                 <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#gyereke">Fájlkezelés</a></li>
-                    <li><a class="dropdown-item" href="#gyereke">Kivételkezelés</a></li>
+                    <li><a class="dropdown-item" href="#for">for</a></li>
+                    <li><a class="dropdown-item" href="#while">while</a></li>
                 </ul>
+            </li>
 
             <li class="nav-item">
                 <a class="nav-link active" href="#sajat">Saját függvény készítése</a>
             </li>
 
             <li class="nav-item dropdown">
-                <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Ciklusok</a>
+                <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Fájlkezelés</a>
                 <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="#megnyitas">Megnyitási módok</a></li>
                     <li><a class="dropdown-item" href="#iras">Írás</a></li>
-                    <li><a class="dropdown-item" href="#olvasas">Olvasas</a></li>
+                    <li><a class="dropdown-item" href="#olvasas">Olvasás</a></li>
                 </ul>
+            </li>
 
             <li class="nav-item">
                 <a class="nav-link active" href="#kivetelkezeles">Kivételkezelés</a>
@@ -65,129 +67,195 @@
 </head>
 <body>
 
-    <div class="container-fluid p-5 bg-light text-dark text-center">
+    <div class="container-fluid p-5 bg-light text-dark text-center hero-section">
         <h1>Üdvözlünk a Pythonlearning oldalán</h1>
-        <p>Python gyakorló oldal</p> 
+        <p>Python gyakorló oldal</p>
         <button type="button" class="btn btn-dark">Projektek megtekintése</button>
     </div>
 
     <br><br>
 
-
     <h2 id="egyszeru">Egyszerű adattípusok</h2>
 
         <h4 id="str">str</h4>
-
-        <p>Például: <strong>x = "Hello World"</strong></p>
+        <p>A <strong>str</strong> (string) szöveges adatokat tárol. Idézőjelek közé kell írni.<br>
+        Például: <strong>x = "Hello World"</strong><br>
+        Hasznos műveletek: <strong>len(x)</strong> – hossz, <strong>x.upper()</strong> – nagybetű, <strong>x.lower()</strong> – kisbetű.</p>
 
         <h4 id="int">int</h4>
-
-        <p>Például: <strong>x = 67</strong></p>
+        <p>Az <strong>int</strong> egész számokat tárol, tizedes pont nélkül.<br>
+        Például: <strong>x = 67</strong><br>
+        Matematikai műveletek elvégezhetők rajta: összeadás, kivonás, szorzás, osztás (<strong>+, -, *, /</strong>).</p>
 
         <h4 id="float">float</h4>
-
-        <p>Például: <strong>x = 67.67</strong></p>
+        <p>A <strong>float</strong> lebegőpontos (tizedes) számokat tárol.<br>
+        Például: <strong>x = 67.67</strong><br>
+        Típuskonverzió: <strong>int(x)</strong> egésszé alakítja, <strong>round(x, 2)</strong> kerekíti.</p>
 
         <h4 id="bool">bool</h4>
-
-        <p>Például: <strong>x = True</strong> vagy <strong>x = False</strong></p>
+        <p>A <strong>bool</strong> logikai értéket tárol: igaz (<strong>True</strong>) vagy hamis (<strong>False</strong>).<br>
+        Például: <strong>x = True</strong> vagy <strong>x = False</strong><br>
+        Feltételek kiértékelésekor automatikusan bool értéket kapunk vissza.</p>
 
         <h4 id="list">list</h4>
+        <p>A <strong>list</strong> több elemet tárol sorban, szögletes zárójelek között. Az elemek módosíthatók.<br>
+        Például: <strong>x = ["alma", "körte", "szilva"]</strong><br>
+        Műveletek: <strong>x.append("barack")</strong> – hozzáadás, <strong>x.remove("alma")</strong> – törlés, <strong>x[0]</strong> – indexelés.</p>
 
-        <p>Például: <strong>x = ["alma", "körte, "szilva"]</strong></p>
-
-        <center><img src="img/easy dt.png" alt="Egyszerű"></center>
+        <center><img src="img/easy.png" alt="Egyszerű"></center>
 
         <br><br><br>
 
     <h2>Összetett adattípusok</h2>
 
         <h4 id="range">range</h4>
-
-        <p>Például: <strong>for i in range(0,7,2): <br>print(i) <br>
-            Tehát i = 0, 2, 4, 6 
-        </strong></p>
+        <p>A <strong>range()</strong> egy számsort hoz létre. Paraméterei: <strong>range(kezdet, vég, lépés)</strong>.<br>
+        Például: <strong>for i in range(0, 7, 2):</strong><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;<strong>print(i)</strong><br>
+        Tehát i = 0, 2, 4, 6 – a végső értéket nem tartalmazza.<br>
+        Ha csak egy paramétert adsz meg, pl. <strong>range(5)</strong>, akkor 0-tól 4-ig számol.</p>
 
         <h4 id="dict">dict</h4>
+        <p>A <strong>dict</strong> (szótár) kulcs-érték párokat tárol kapcsos zárójelek között.<br>
+        Például: <strong>x = {"nev": "Béla", "kor": 20}</strong><br>
+        Elérés: <strong>x["nev"]</strong> visszaadja: <strong>"Béla"</strong><br>
+        Hozzáadás: <strong>x["varos"] = "Budapest"</strong> – új kulcs-érték pár felvétele.<br>
+        A kulcsoknak egyedinek kell lenniük a szótáron belül.</p>
 
-        <p>A dictionary (magyarul szótár)-ban meglepő módon szavakat lehet el menteni. <br>
-        Páldául: <strong>x = {név : Béla, kor : 20}</strong></p>
-
-        <center><img src="img/data types.png" alt="Összes"></center> 
+        <center><img src="img/Python-Data-Types.png" alt="Összes"></center>
 
         <br><br>
-        
+
     <h2 id="elagazas">Elágazás</h2>
 
         <h4>if</h4>
+        <p>Az <strong>if</strong> utasítás egy feltételt vizsgál meg. Ha a feltétel igaz, a blokk lefut.<br>
+        Például: <strong>a = 10<br>
+        if a > 5:<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;print("Az a nagyobb, mint 5.")</strong></p>
 
-        <div class="text-center">        
+        <div class="text-center">
             <h5>Logikai feltételek:</h5>
             <p>Egyenlő: <strong>a == b</strong><br>
             Nem egyenlő: <strong>a != b</strong><br>
-            Kevesebb, mint: <strong>a < b</strong><br>
-            Kevesebb vagy egyenlő, mint: <strong>a <= b</strong><br>
-            Nagyobb, mint: <strong>a > b</strong><br>
-            Nagyobb vagy egyenlő, mint: <strong>a >= b</strong><br>
+            Kevesebb, mint: <strong>a &lt; b</strong><br>
+            Kevesebb vagy egyenlő, mint: <strong>a &lt;= b</strong><br>
+            Nagyobb, mint: <strong>a &gt; b</strong><br>
+            Nagyobb vagy egyenlő, mint: <strong>a &gt;= b</strong><br>
             </p>
         </div>
 
-
         <h4>elif</h4>
-
-        <p>Az elif kulcsszó a Python azon értelmű megfogalmazása, 
-            hogy „ha az előző feltételek nem voltak igazak, 
-            akkor próbáld ki ezt a feltételt”. <br>
-            Például: <br><strong>a = 33 <br> b = 33 <br>
-            if a > b: <br> print("Az a nagyobb, mint a b.") <br>
-            elif a == b: <br> print("Az a és a b megegyezik.")</strong></p>
+        <p>Az <strong>elif</strong> kulcsszó a Python azon értelmű megfogalmazása,
+            hogy „ha az előző feltételek nem voltak igazak,
+            akkor próbáld ki ezt a feltételt". Tetszőleges számú elif ág használható.<br>
+            Például: <br><strong>a = 33<br>b = 33<br>
+            if a &gt; b:<br>&nbsp;&nbsp;&nbsp;&nbsp;print("Az a nagyobb, mint a b.")<br>
+            elif a == b:<br>&nbsp;&nbsp;&nbsp;&nbsp;print("Az a és a b megegyezik.")</strong></p>
 
         <h4>else</h4>
+        <p>Az <strong>else</strong> kulcsszó mindent elkap, amit az előző feltételek nem kapnak el.
+        Mindig az if (és elif) blokkok után áll, és csak egyszer szerepelhet.<br>
+        Például: <br><strong>a = 200<br>b = 33<br>
+        if b &gt; a:<br>&nbsp;&nbsp;&nbsp;&nbsp;print("A b nagyobb, mint az a.")<br>
+        elif a == b:<br>&nbsp;&nbsp;&nbsp;&nbsp;print("Az a és a b megegyezik.")<br>
+        else:<br>&nbsp;&nbsp;&nbsp;&nbsp;print("Az a nagyobb, mint b.")</strong></p>
 
-        <p>Az else kulcsszó mindent elkap, amit az előző feltételek nem kapnak el. <br>
-        Például: <br> <strong>a = 200 <br> b = 33 <br>
-        if b > a: <br> print("A b nagyobb, mint az a.") <br>
-        elif a == b: <br> print(Az a és a b megyezik.) <br>
-        else: <br>
-        print("Az a nagyobb, mint b")</strong></p>
-
-        <center><img src="img/if.jpg" alt="folyamata"></center>
+        <center><img src="img/if.png" alt="folyamata"></center>
 
         <br><br>
 
     <h2>Ciklusok</h2>
 
-        <h3>for</h3>    
-    
-        <p></p>
+        <h3 id="for">for</h3>
+        <p>A <strong>for</strong> ciklus egy sorozat (pl. lista, range) elemein iterál végig egyenként.<br>
+        Például: <strong>gyumolcsok = ["alma", "körte", "szilva"]<br>
+        for gyumolcs in gyumolcsok:<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;print(gyumolcs)</strong><br>
+        Ez sorban kiírja: alma, körte, szilva.<br>
+        A <strong>break</strong> utasítással idő előtt kiléphetünk a ciklusból,
+        a <strong>continue</strong> utasítással pedig az aktuális iterációt ugorhatjuk át.</p>
 
-        <h3>while</h3>
-
-        <p></p>
-
+        <h3 id="while">while</h3>
+        <p>A <strong>while</strong> ciklus addig fut, amíg a megadott feltétel igaz.<br>
+        Például: <strong>i = 1<br>
+        while i &lt; 6:<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;print(i)<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;i += 1</strong><br>
+        Ez kiírja az 1-től 5-ig terjedő számokat.<br>
+        Fontos, hogy a ciklus változóját minden lépésben frissítsük, különben végtelen ciklus keletkezhet.<br>
+        A <strong>break</strong> itt is használható a ciklus azonnali leállítására.</p>
+        
+        <div class="kepek">
+            <img src="img/for.png" alt="For ciklus">
+            <img src="img/while.png" alt="While ciklus">
+        </div>
         <br><br>
 
     <h2 id="sajat">Saját függvény készítése</h2>
-
-        <p></p>
+        <p>A <strong>def</strong> kulcsszóval hozhatunk létre saját függvényeket. A függvény neve után zárójelben adjuk meg a paramétereket.<br>
+        Például: <strong>def koszont(nev):<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;print("Helló, " + nev + "!")<br><br>
+        koszont("Anna")</strong><br>
+        Kimenet: <strong>Helló, Anna!</strong><br><br>
+        A <strong>return</strong> utasítással visszaadhatunk egy értéket a függvényből:<br>
+        <strong>def osszead(a, b):<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;return a + b<br><br>
+        eredmeny = osszead(3, 5)<br>
+        print(eredmeny)</strong><br>
+        Kimenet: <strong>8</strong><br><br>
+        A függvényeknek lehetnek alapértelmezett paraméterei is:
+        <strong>def koszont(nev="Ismeretlen"):</strong> – ha nem adunk meg nevet, az "Ismeretlen" értéket veszi fel.</p>
 
     <h2>Fájlkezelés</h2>
 
         <h3 id="megnyitas">Megnyitási módok</h3>
-
-        <p></p>
+        <p>Fájlokat a beépített <strong>open()</strong> függvénnyel lehet megnyitni. A második paraméter a megnyitási mód.<br><br>
+        <strong>"r"</strong> – olvasás (alapértelmezett, a fájlnak léteznie kell)<br>
+        <strong>"w"</strong> – írás (felülírja a fájlt, ha létezik; ha nem, létrehozza)<br>
+        <strong>"a"</strong> – hozzáfűzés (a meglévő tartalom végére ír)<br>
+        <strong>"x"</strong> – létrehozás (hibát dob, ha a fájl már létezik)<br>
+        <strong>"b"</strong> – bináris mód (pl. képek, hangfájlok esetén: <strong>"rb"</strong>, <strong>"wb"</strong>)<br><br>
+        Ajánlott a <strong>with</strong> kulcsszóval megnyitni a fájlt, mert így automatikusan bezáródik:<br>
+        <strong>with open("fajl.txt", "r") as f:<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;tartalom = f.read()</strong></p>
 
         <h3 id="iras">Írás</h3>
-
-        <p></p>
+        <p>Fájlba íráshoz <strong>"w"</strong> (felülírás) vagy <strong>"a"</strong> (hozzáfűzés) módot kell megadni.<br>
+        Például: <strong>with open("naplo.txt", "w") as f:<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;f.write("Ez az első sor.\n")<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;f.write("Ez a második sor.\n")</strong><br><br>
+        A <strong>\n</strong> karakterrel új sort kezdhetünk. Ha már meglévő fájlhoz szeretnénk hozzáadni tartalmát, használjuk az <strong>"a"</strong> módot, különben a <strong>"w"</strong> törli az előző tartalmat.</p>
 
         <h3 id="olvasas">Olvasás</h3>
-
-        <p></p>
+        <p>Fájl tartalmának beolvasásához <strong>"r"</strong> módot használunk.<br>
+        Például: <strong>with open("naplo.txt", "r") as f:<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;tartalom = f.read()<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;print(tartalom)</strong><br><br>
+        Más olvasási módszerek:<br>
+        <strong>f.readline()</strong> – egyetlen sort olvas be<br>
+        <strong>f.readlines()</strong> – az összes sort listába olvassa<br><br>
+        Soronkénti feldolgozás ciklussal:<br>
+        <strong>with open("naplo.txt", "r") as f:<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;for sor in f:<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(sor.strip())</strong></p>
 
     <h2 id="kivetelkezeles">Kivételkezelés</h2>
+        <p>A kivételkezelés segít abban, hogy a program ne álljon le hiba esetén. A <strong>try-except</strong> blokkot használjuk erre.<br><br>
+        Például: <strong>try:<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;szam = int(input("Adj meg egy számot: "))<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;print(10 / szam)<br>
+        except ValueError:<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;print("Nem adtál meg érvényes számot!")<br>
+        except ZeroDivisionError:<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;print("Nullával nem lehet osztani!")</strong><br><br>
+        Az <strong>else</strong> ág csak akkor fut le, ha nem történt hiba:<br>
+        <strong>else:<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;print("A művelet sikeresen elvégzésre került.")</strong><br><br>
+        A <strong>finally</strong> ág mindig lefut, hibától függetlenül – pl. fájl bezárásához, erőforrások felszabadításához hasznos:<br>
+        <strong>finally:<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;print("A program végrehajtása befejeződött.")</strong></p>
 
-        <p></p>
     <br><br>
 </body>
 
